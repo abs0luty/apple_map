@@ -30,7 +30,7 @@ Resolve values by keys in 1 function call:
 ```c
 uintptr_t value;
 
-if apple_map_get(map, "hello", sizeof("hello") - 1, &value) {
+if (apple_map_get(map, "hello", sizeof("hello") - 1, &value)) {
   printf("map[\"hello\"] = %d\n", value);
 }
 ```
