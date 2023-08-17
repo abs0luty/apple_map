@@ -1,8 +1,7 @@
 #include "../apple_map.h"
 #include <string.h>
 #include <stdio.h>
-
-void free_hello() {}
+#include <stdlib.h>
 
 int main()
 {
@@ -15,9 +14,10 @@ int main()
 
   printf("map.len() = %ld\n", apple_map_len(map));
 
-  apple_map_remove(map, hello, sizeof(hello) - 1, 1);
+  apple_map_remove(map, hello, sizeof(hello) - 1);
 
   printf("map.len() = %ld\n", apple_map_len(map));
 
   free(hello);
+  apple_map_free(map);
 }

@@ -40,4 +40,6 @@ int main()
 	{
 		printf("map[\"!\"] = undefined\n");
 	}
+
+	apple_map_free(map);
 }
